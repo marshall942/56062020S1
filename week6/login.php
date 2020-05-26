@@ -30,6 +30,13 @@ if (isset($_POST["username"])) {
         while ($row = $result->fetch_assoc()) {
             if ($row["password"] == $password) { //check password
                 echo "Access granted";
+                session_start();
+                $_SESSION["username"] = $username;
+                ?>
+                <p><a href="profile.php">profile</a></p>
+                <p><a href="changepassword.php">change password</a></p>
+                <?php
+
             }
             else {
                 echo "Wrong paddword"
@@ -39,6 +46,7 @@ if (isset($_POST["username"])) {
     else {
         echo "Wrong username";
     }
+    $connection->close();
 }
 else { ?>
     <script>
@@ -46,3 +54,4 @@ else { ?>
     </script>
     <?php
 }
+

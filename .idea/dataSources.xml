@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="heroku mysql" uuid="5bfe70b4-3e99-430c-91eb-7574a769d738">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://g9fej9rujq0yt0cd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="heroku mysql 2" uuid="b289aabe-b4f8-49c9-a8a6-cca44d4537b2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://g9fej9rujq0yt0cd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306</jdbc-url>
+    </data-source>
+  </component>
+</project>
