@@ -10,18 +10,7 @@ if (isset($_POST["username"])) {
     $username = $_POST["username"];
     $password = $_POST["pwd"];
 
-    $server = "g9fej9rujq0yt0cd.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    $user = "icibdh91bbrbwbvm";
-    $pwd = "kdtxdor70hp0zgwy";
-    $database = "cun8cx3lck9iiqgv";
-
-    $connection = new mysqli($server, $user, $pwd, $database);
-    if ($connection->connect_error) {
-        echo $connection->connect_error;
-    }
-    else {
-        echo "Connection created";
-    }
+    include_once "dbconnection";
 
     //is the username in my table
     $sql = "select * from users where username = '$username'"; //this is our query
@@ -32,26 +21,31 @@ if (isset($_POST["username"])) {
                 echo "Access granted";
                 session_start();
                 $_SESSION["username"] = $username;
-                ?>
-                <p><a href="profile.php">profile</a></p>
-                <p><a href="changepassword.php">change password</a></p>
-                <?php
+
 
             }
             else {
-                echo "Wrong paddword"
+                echo "Wrong password";
+                ?>
+                <script>
+                    setTimeout(function () {
+                        window.open("loginform.html", "_self");
+                    }, 3000);
+                </script>
+                <?php
             }
         }
     }
     else {
         echo "Wrong username";
+        ?>
+        <script>
+            window.open("loginform.html", "_self"); //go to login form
+        </script>
+        <?php
     }
     $connection->close();
 }
-else { ?>
-    <script>
-        window.open("loginform.html");
-    </script>
-    <?php
+else {
 }
 
