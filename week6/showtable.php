@@ -23,10 +23,10 @@
         $record = $records[$i]; //inside each record, we have place 0 for id, place 1 for username, place 2 for password, place 3 for name
         ?>
         <tr>
-            <td><?php echo $record[0]; ?></td>
-            <td><?php echo $record[1]; ?></td>
-            <td><?php echo $record[2]; ?></td>
-            <td><?php echo $record[3]; ?></td>
+            <td><?php echo $record->id; ?></td>
+            <td><?php echo $record->getUsername(); ?></td>
+            <td><?php echo $record->getPassword(); ?></td>
+            <td><?php echo $record->name; ?></td>
         </tr>
         <?php
         $i = $i + 1;
