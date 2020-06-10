@@ -1,0 +1,97 @@
+/*general style for the header*/
+.header {
+    padding: 2px 10px;
+    background: #FF004C;
+    color: #000000;
+    font-family: Quicksand;
+}
+
+/*removing the blue link color and underline*/
+.header a {
+    color: black;
+    text-decoration: none;
+}
+
+/*css animation to make links white when hovered over*/
+.header a:hover {
+    color: white;
+}
+
+/*remove article links blue color and underline*/
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*defines the width of the article columns*/
+.column {
+    float: left;
+    width: 22%;
+}
+
+/*makes the text in the footer gray*/
+.footer {
+    color: gray;
+}
+
+/*clears float after the columns*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*giving the carousel some padding*/
+.content {
+    padding: 10px;
+}
+
+/*defining carousel image size*/
+#dogCategory {
+    height: 300px;
+    width: 800px;
+}
+
+/*background color for filter*/
+.filter {
+    background-color: #7D7D7D;
+    width: 250px;
+    margin: 0 10px 0 0;
+}
+
+.filter h2 {
+    padding: 5px;
+}
+
+/*defining product image size*/
+.productImage {
+    height: 150px;
+    width: 200px;
+}
+
+/*border for articles and products*/
+.border {
+    border: solid 2px #7D7D7D;
+    margin: 5px;
+}
+
+/*changing the font for the content div*/
+#myContent {
+    font-family: "Open sans";
+}
+
+/*changing the font for the footer div*/
+#myFooter {
+    font-family: Quicksand;
+}
+
+/*align article text to centre */
+.article {
+    text-align: center;
+}
+
+/*align product content to centre and pad it*/
+.product {
+    text-align: center;
+    padding: 5px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet food shop cat food</title> <!--category template-->
+    <link rel="stylesheet" href="css/style.css"> <!--css link-->
+    <script src="js/script.js"></script> <!--javascript link-->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'> <!--link for quicksand font-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"> <!--link for open sans font-->
+</head>
+<body>
+<!--header div-->
+<div class="header" id="myHeader">
+    <h1><a href="https://marshall942.github.io/HTCS5606_casestudy1/home-page.html">Pet food shop online</a></h1>
+    <hr>
+    <h2>
+        <a href="https://marshall942.github.io/HTCS5606_casestudy1/dog-category.html">Dogs</a>
+        <a href="https://marshall942.github.io/HTCS5606_casestudy1/cat-category.html">Cats</a>
+        <a href="https://marshall942.github.io/HTCS5606_casestudy1/bird-category.html">Birds</a>
+        <a href="https://marshall942.github.io/HTCS5606_casestudy1/lizard-category.html">Reptiles</a>
+        <a href="#">Other</a>
+        <a href="#">Cart</a>
+    </h2></div>
+
+<!--content div-->
+<div class="content" id="myContent">
+
+    <div class="row">
+        <!--filter div-->
+        <div class="column filter">
+            <h2>Food</h2>
+            <h2>Other</h2>
+            <h2>Sort by:</h2>
+            <h2>Price</h2>
+        </div>
+        <!--carousel div-->
+        <div class="column">
+            <img id="dogCategory" onclick="carousel()" src="image/dog.jpg"/>
+        </div>
+    </div>
+    <br>
+    <!--cart row-->
+    <div class="row">
+        <div class="border" id="cartContent"><p>Cart contents:</p></div>
+    </div>
+    <!--product row-->
+    <div class="row">
+        <div class="column border product">
+            <img class="productImage" src="image/cat-food-brand-1.jpg" alt="Picture of cat food brand 1"/>
+            <h2>Cat food brand 1</h2>
+            <p>$3.00 each</p>
+            <p>Quantity:<input class="qty" id="catFood1Qty" type="number">
+                <button class="addBut" id="addCatFood1" onclick="addToCart(this)" price="3.00">Add to cart</button>
+        </div>
+        <div class="column border product">
+            <img class="productImage" src="image/cat-food-brand-2.jpg" alt="Picture of cat food brand 2"/>
+            <h2>Cat food brand 2</h2>
+            <p>$5.49 each</p>
+            <p>Quantity:<input class="qty" id="catFood2Qty" type="number">
+                <button class="addBut" id="addCatFood2" onclick="addToCart(this)" price="5.49">Add to cart</button>
+        </div>
+    </div>
+</div>
+
+<!--footer div-->
+<div class="footer" id="myFooter">
+    <p>&copy; Pet food shop 2020</p>
+</div>
+</body>
+</html>
