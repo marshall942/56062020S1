@@ -2,18 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pet food shop lizard food</title>
+    <title>Pet food shop dog food</title>
     <link rel="stylesheet" href="css/style.css"> <!--css link-->
     <script src="js/script.js"></script> <!--javascript link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--link to jquery script-->
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'> <!--link for quicksand font-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"> <!--link for open sans font-->
 </head>
-<body>
+<body onload="invoice()">
 
-<?php
-include_once "header.php"
-?>
+<?php include_once 'header.php';?>
 
 <!--content div-->
 <div class="content" id="myContent">
@@ -39,25 +36,23 @@ include_once "header.php"
     <!--product row-->
     <div class="row">
         <div class="column border product">
-            <img class="productImage" src="image/lizard-food-brand-1.jpg" alt="Picture of reptile food brand 1"/>
-            <h2>Reptile food brand 1</h2>
-            <p>$2.99 each</p>
-            <p>Quantity:<input class="qty" id="lizardFood1Qty" type="number">
-                <button class="addBut" id="addLizardFood1" onclick="addToCart(this)" price="2.99">Add to cart</button>
+            <img class="productImage" src="image/dog-food-brand-1.jpg" alt="Picture of dog food brand 1"/>
+            <h2>Dog food brand 1</h2>
+            <p>$8.50 each</p>
+            <p>Quantity:<input class="qty" id="dogFood1Qty" type="number">
+                <button class="addBut" id="addDogFood1" onclick="addToCart(this)" price="8.50">Add to cart</button>
         </div>
         <div class="column border product">
-            <img class="productImage" src="image/lizard-food-brand-2.jpg" alt="Picture of reptile food brand 2"/>
-            <h2>Reptile food brand 2</h2>
-            <p>$2.45 each</p>
-            <p>Quantity:<input class="qty" id="lizardFood2Qty" type="number">
-                <button class="addBut" id="addLizardFood2" onclick="addToCart(this)" price="2.45">Add to cart</button>
+            <img class="productImage" src="image/dog-food-brand-2.jpg" alt="Picture of dog food brand 2"/>
+            <h2>Dog food brand 2</h2>
+            <p>$5.00 each</p>
+            <p>Quantity:<input class="qty" id="dogFood2Qty" type="number">
+                <button class="addBut" id="addDogFood2" onclick="addToCart(this)" price="5.00">Add to cart</button>
         </div>
     </div>
 </div>
 
-<?php
-include_once "footer.php"
-?>
+<?php include_once 'footer.php';?>
 
 </body>
 </html>
