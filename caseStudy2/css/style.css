@@ -95,3 +95,8 @@ a {
     text-align: center;
     padding: 5px;
 }
+
+/*padding for cart content*/
+#cartContent {
+    padding: 5px;
+}
