@@ -54,8 +54,8 @@ function login($username, $password)
 function showProfile($username)
 {
     $conn = dbconn();
-    $sql = "select * from users where username='something'";
-    $result = $connection->query($sql);
+    $sql = "select * from users where username='$username'";
+    $result = $conn->query($sql);
     if ($result->num_rows == 1) {
         while ($row = $result->fetch_assoc()) {
             echo "<p>" . $row["id"] . "</p>";
@@ -74,11 +74,11 @@ function showProfile($username)
  * @param $newPwd
  * @return bool //changed or not
  */
-function changePassword($username, $oldPwd, $newPwd)
+function changePassword($username, $oldPassword, $newPassword)
 {
     $conn = dbconn();
-    $sql = "select password from users where username='something'";
-    $result = $connection->query($sql);
+    $sql = "select password from users where username='$username'";
+    $result = $conn->query($sql);
     if ($result->num_rows == 1) {
         while ($row = $result->fetch_assoc()) {
             $oldPwdInDtb = $row["password"];
@@ -86,9 +86,9 @@ function changePassword($username, $oldPwd, $newPwd)
     }
 
     if ($oldPassword == $oldPwdInDtb) {
-        $sql = "update users set password - '";
-        $sql .= $newpassword;
-        $sql .= "'where username = '$username'";
+        $sql = "update Users set password = '";
+        $sql .= $newPassword;
+        $sql .= "' where username = '$username'";
         $conn->query($sql);
         return true;
     } else {
@@ -103,9 +103,9 @@ include_once "class/User.php";
  * @return array // User array
  */
 function showRecords() {
-    $connection->dbconn();
-    $sql = "select * from Users"; //create query
-    $result = $connection->query($sql); //run the query on this connection
+    $conn = dbconn();
+    $sql = "select * from users"; //create query
+    $result = $conn->query($sql); //run the query on this connection
     $records = array();
 
     if ($result->num_rows > 0) { //check if there is a record in the result
@@ -119,6 +119,6 @@ function showRecords() {
     else {
         echo "No result in the table";
     }
-    $connection->close();
+    $conn->close();
     return $records;
 }
