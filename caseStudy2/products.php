@@ -55,7 +55,7 @@ include_once "header.php"
                 <h2><?php echo $product->name;?></h2>
                 <p>$<?php echo $product->price;?> each</p>
                 <p>Quantity:<input class="qty" type="number" />
-                    <button name="<?php echo $product->name; ?>" class="addBut" onclick="addToCart(this)">Add to cart</button>
+                    <button name="<?php echo $product->name; ?>" price="<?php echo $product->price; ?>" class="addBut" onclick="addToCart(this)">Add to cart</button>
             </div>
             <?php
             $i = $i + 1;
