@@ -51,7 +51,7 @@ include_once "header.php"
             $product = $products[$i];
             ?>
             <div class="column border product">
-                <img class="productImage" src="image/<?php echo $product->picture;?>" alt="Picture of bird food brand 1"/>
+                <img class="productImage" src="<?php echo $product->picture;?>" alt="Picture of bird food brand 1"/>
                 <h2><?php echo $product->name;?></h2>
                 <p>$<?php echo $product->price;?> each</p>
                 <p>Quantity:<input class="qty" type="number" />
