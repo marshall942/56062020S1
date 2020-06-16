@@ -37,7 +37,7 @@ class user
      * @return category array
      */
     public function viewCategories(){
-        $conn = (new DB())->connection; //create connection from DB class
+        $conn = (new DB())->dbconnection; //create connection from DB class
         $sql = "select * from category"; //my query
         $categories = array(); //my categories are an array
         $result = $conn->query($sql);
@@ -58,7 +58,7 @@ class user
      */
 
     public function showProductsByCategory($categoryID) {
-        $conn = (new DB())->connection;
+        $conn = (new DB())->dbconnection;
         $sql = "select * from product where categoryID=".$categoryID; // . means merge 2 strings
         $products = array();
         $result = $conn->query($sql);
