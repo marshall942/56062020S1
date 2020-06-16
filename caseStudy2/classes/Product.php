@@ -12,7 +12,7 @@ class product
     public $name;
     public $price;
     public $picture;
-    public $categoryID
+    public $categoryID;
 
 /**
  * product constructor.
@@ -21,7 +21,8 @@ class product
  * @param $price
  * @param $picture
  * @param $categoryID
- */public function __construct($id, $name, $price, $picture, $categoryID)
+ */
+public function __construct($id, $name, $price, $picture, $categoryID)
 {
     $this->id = $id;
     $this->name = $name;
