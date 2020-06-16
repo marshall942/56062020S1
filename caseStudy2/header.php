@@ -16,7 +16,7 @@
         $user = new User(null, "", "", "");
         $categories = $user->viewCategories();
         $i = 0;
-        while (i < sizeOf($categories)) {
+        while ($i < sizeOf($categories)) {
             $category = $categories[$i];
             echo "<li><a href='products.php?categoryID=".$category->id."'>".$category->name."</a></li>";
             $i = $i + 1;
