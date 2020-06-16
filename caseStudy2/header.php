@@ -9,13 +9,13 @@
         <!--        <a href="https://marshall942.github.io/HTCS5606_casestudy1/bird-category.html">Birds</a>-->
         <!--        <a href="https://marshall942.github.io/HTCS5606_casestudy1/lizard-category.html">Reptiles</a>-->
         <?php
-        include_once "classes/user.php";
-        $user = new user(null, "", "", "");
+        include_once "classes/User.php";
+        $user = new User(null, "", "", "");
         $categories = $user->viewCategories();
         $i = 0;
         while (i < sizeOf($categories)) {
-            $categories = $categories[$i];
-            echo "<li><a href='products.php?categoryID=".$category->id."'>".$category->name."</a></li>"
+            $category = $categories[$i];
+            echo "<li><a href='products.php?categoryID=".$category->id."'>".$category->name."</a></li>";
             $i = $i + 1;
         }
         ?>

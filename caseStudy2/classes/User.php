@@ -7,8 +7,8 @@
  */
 
 include_once "DB.php";
-include_once "category.php";
-include_once "product.php";
+include_once "Category.php";
+include_once "Product.php";
 
 class user
 {
